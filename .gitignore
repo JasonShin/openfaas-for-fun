@@ -6,3 +6,8 @@ fwatchdog-armhf
 .idea
 certifier
 .editorconfig
+
+template
+build
+# any env files
+**/env.yml

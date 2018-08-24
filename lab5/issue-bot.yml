@@ -1,0 +1,15 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  issue-bot:
+    lang: python3
+    handler: ./issue-bot
+    image: visualbbasic/issue-bot:latest
+    environment:
+      write_debug: true
+      gateway_hostname: "gateway"
+      positive_threshold: 0.25
+    environment_file:
+    - env.yml
